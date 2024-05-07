@@ -162,9 +162,11 @@ def main():
                 time.sleep(1)
                 return
         if not(bomb is None or beam is None):
-            if beam.rct.colliderect(bomb.rct):  # ビームと爆弾が衝突したら
+            if beam.rct.colliderect(bomb.rct):  # ビームと爆弾が衝突したら, こうかとん画像を切り替え
                 bomb = None
                 beam = None
+                bird.change_img(6, screen)
+                pg.display.update()
         
         key_lst = pg.key.get_pressed()
         bird.update(key_lst, screen)
