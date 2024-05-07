@@ -152,6 +152,7 @@ class Score:
     def upgret(self):
         self.value += 1
 
+
 def main():
     pg.display.set_caption("たたかえ！こうかとん")
     screen = pg.display.set_mode((WIDTH, HEIGHT))    
